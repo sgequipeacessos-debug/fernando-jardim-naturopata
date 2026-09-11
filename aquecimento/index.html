@@ -5,7 +5,114 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>7 Royal Chef</title>
 <meta name="description" content="Assista ao vídeo e siga o 7 Royal Chef no Instagram.">
-<link rel="stylesheet" href="/assets/style.css?v=1">
+<style>
+/* 7 Royal Chef — página de bio
+   Coluna central com o player e o botão; rodapé fixo no fim do conteúdo. */
+
+:root {
+  color-scheme: light;
+  --texto: #1a1a1a;
+  --rodape-fundo: #f0f0f0;
+  --rodape-texto: #4a4a4a;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  color: var(--texto);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Coluna central ---------------------------------------------------- */
+
+.wrap {
+  flex: 1 0 auto;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 40px 16px 48px;
+}
+
+.player {
+  width: 100%;
+}
+
+/* Botão ------------------------------------------------------------- */
+
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 24px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  background: linear-gradient(95deg, #feda75 0%, #fa7e1e 25%, #d62976 60%, #962fbf 85%, #4f5bd5 100%);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: .02em;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(214, 41, 118, .28);
+  transition: transform .12s ease, box-shadow .12s ease, filter .12s ease;
+}
+
+.cta:hover {
+  filter: brightness(1.04);
+  box-shadow: 0 8px 22px rgba(214, 41, 118, .34);
+}
+
+.cta:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 12px rgba(214, 41, 118, .28);
+}
+
+.cta-icon {
+  width: 22px;
+  height: 22px;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+}
+
+.cta-icon .dot {
+  fill: currentColor;
+  stroke: none;
+}
+
+/* Rodapé ------------------------------------------------------------ */
+
+.foot {
+  flex: none;
+  background: var(--rodape-fundo);
+  padding: 28px 16px;
+  text-align: center;
+}
+
+.foot p {
+  margin: 0;
+  color: var(--rodape-texto);
+  font-size: 15px;
+}
+
+/* Telas menores ----------------------------------------------------- */
+
+@media (max-width: 420px) {
+  .wrap { padding-top: 24px; }
+  .cta  { font-size: 15px; }
+}
+</style>
 </head>
 <body>
 
